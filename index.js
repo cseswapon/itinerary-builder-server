@@ -21,13 +21,7 @@ app.get("*", (req, res) => {
   res.send({ message: `This URL: ${req.url} is not found` });
 });
 
-// database connected
-mongoose
-  .connect(`${process.env.DATABASE_URI}/builder`)
-  .then(() => {
-    console.log(`Database Connected Successfully`.black.bgGreen);
-  })
-  .catch((err) => console.log(err.message).red.bold);
+
 
 // server running
 app.listen(port, () => {
