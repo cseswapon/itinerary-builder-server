@@ -1,7 +1,7 @@
 require("colors");
 require("dotenv").config();
 const mongoose = require("mongoose");
-const app = require("./index");
+const app = require("./main");
 const port = process.env.PORT || 8080;
 
 // database connected
