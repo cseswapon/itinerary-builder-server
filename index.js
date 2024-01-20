@@ -30,6 +30,7 @@ mongoose
   .connect(`${process.env.DATABASE_URI}/builder`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    w: "majority",
   })
   .then(() => {
     console.log(`Database Connected Successfully`.black.bgGreen);
